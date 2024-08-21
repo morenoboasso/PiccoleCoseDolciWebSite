@@ -517,7 +517,7 @@ h5 a:hover {
 }
 
 /* Centra il titolo "Chi Siamo" su dispositivi mobili */
-@media (max-width: 768px) {
+@media (max-width: 1121210px) {
   .text-center-mobile {
       text-align: center;
   }
