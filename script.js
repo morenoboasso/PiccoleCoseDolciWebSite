@@ -153,3 +153,4 @@ function compressImage(file, maxWidth, maxHeight, quality) {
         };
     });
 }
+

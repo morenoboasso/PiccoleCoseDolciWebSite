@@ -403,3 +403,108 @@ h5 a:hover {
   font-size: 14px; 
   padding-right: 20px; 
 }
+
+.footer-logo {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombra */
+  border-radius: 50%; /* Opzionale: per mantenere la forma circolare */
+}
+
+.map-container {
+  border-radius: 20px; /* Arrotonda gli angoli */
+  overflow: hidden; /* Nasconde il contenuto che esce dai bordi arrotondati */
+}
+
+/* Riduce la dimensione dell'immagine e aggiunge un'ombra */
+.chisiamo-img-small {
+  width: 80%; /* Imposta la larghezza desiderata */
+  max-width: 400px; /* Imposta una larghezza massima */
+  height: auto; /* Mantiene le proporzioni dell'immagine */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra più pronunciata */
+}
+
+
+/* About Us Section */
+.chisiamo-img-fluid {
+  max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+  height: auto; /* Mantiene le proporzioni dell'immagine */
+  border-radius: 0.5rem; /* Arrotonda gli angoli dell'immagine */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra all'immagine */
+}
+
+/* Hero Section */
+.chisiamo-jumbotron {
+  background: #f8f9fa;
+  padding: 3rem 1rem;
+  border-radius: 0.3rem;
+}
+/* Aggiungi questo al tuo file CSS */
+.chisiamo-embed-responsive {
+  position: relative;
+  padding-bottom: 30.25%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px; /* Bordo arrotondato */
+  max-width: 60%; /* Imposta una larghezza massima per il contenitore */
+  margin: 0 auto; /* Centra il contenitore */
+}
+
+.chisiamo-embed-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+/* About Us Section */
+.chisiamo-section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.chisiamo-section-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.chisiamo-rounded-circle {
+  border-radius: 50% !important;
+}
+.chisiamo-shadow-lg {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Team Section */
+.chisiamo-card {
+  border: none;
+  border-radius: 0.5rem;
+}
+.chisiamo-card-img-top {
+  width: 120px; /* Dimensione fissa per le immagini */
+  height: 120px; /* Dimensione fissa per le immagini */
+  object-fit: cover; /* Mantiene l'aspetto dell'immagine */
+  border-radius: 50%; /* Immagini rotonde */
+  margin: 0 auto; /* Centro l'immagine orizzontalmente */
+}
+.chisiamo-card-body {
+  padding: 1.5rem;
+}
+
+/* Testimonials Section */
+.chisiamo-carousel-item {
+  padding: 1rem;
+  margin-bottom: 0; /* Assicurati che non ci siano margini indesiderati */
+  padding-bottom: 0;
+  height: auto;
+}
+.carousel-inner {
+  min-height: 200px; /* o un'altra altezza che meglio si adatta ai tuoi contenuti */
+}
+
+.chisiamo-testimonial {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
