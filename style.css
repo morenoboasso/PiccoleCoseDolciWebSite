@@ -493,7 +493,7 @@ h5 a:hover {
 
 /* Testimonials Section */
 .chisiamo-carousel-item {
-  padding: 1rem;
+  padding: 0rem;
   margin-bottom: 0; /* Assicurati che non ci siano margini indesiderati */
   padding-bottom: 0;
   height: auto;
@@ -505,6 +505,35 @@ h5 a:hover {
 .chisiamo-testimonial {
   background: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Riduci la dimensione del testo e aggiungi padding laterale su dispositivi mobili */
+@media (max-width: 768px) {
+  .text-mobile-custom {
+      font-size: 13px; /* Riduce la dimensione del testo su mobile */
+      padding-left: 20px; /* Aumenta il padding laterale sinistro su mobile */
+      padding-right: 20px; /* Aumenta il padding laterale destro su mobile */
+  }
+}
+
+/* Centra il titolo "Chi Siamo" su dispositivi mobili */
+@media (max-width: 768px) {
+  .text-center-mobile {
+      text-align: center;
+  }
+}
+
+
+/* Add this CSS code */
+@media (max-width: 576px) { /* Targeting mobile devices with a screen width of 576px or less */
+  .chisiamo-testimonial {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  /* Optional: Add some padding to the overall section */
+  .row.my-5 {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+}
