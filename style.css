@@ -551,3 +551,9 @@ h5 a:hover {
   height: 100%; /* Mantieni le proporzioni delle immagini */
 }
 
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
