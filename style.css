@@ -547,7 +547,7 @@ h5 a:hover {
 }
 
 .custom-carousel-inner img {
-  max-width: 100%; /* Assicura che le immagini non superino la larghezza della modal */
+  max-height: 400px; /* Assicura che le immagini non superino la larghezza della modal */
   height: 100%; /* Mantieni le proporzioni delle immagini */
 }
 
