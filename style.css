@@ -538,3 +538,16 @@ h5 a:hover {
   }
 }
 
+
+.custom-modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%; /* Imposta una larghezza massima per la modal */
+}
+
+.custom-carousel-inner img {
+  max-width: 100%; /* Assicura che le immagini non superino la larghezza della modal */
+  height: 100%; /* Mantieni le proporzioni delle immagini */
+}
+

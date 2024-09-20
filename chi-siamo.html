@@ -130,15 +130,15 @@
 
 <!-- Modal -->
 <div class="modal fade center" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style=" width: 90%;height: 10px;"> <!-- Imposta larghezza fissa -->
+    <div class="modal-dialog custom-modal-dialog"> <!-- Usa la nuova classe -->
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="carouselModalLabel">30 Anni di Piccole Cose Dolci</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" style="max-height: 500px; overflow-y: auto;"> <!-- Imposta altezza fissa -->
+            <div class="modal-body" style="max-height: 500px; overflow-y: auto;">
                 <div id="carousel30anni" class="carousel slide">
-                    <div class="carousel-inner" id="carouselItems"></div>
+                    <div class="carousel-inner custom-carousel-inner" id="carouselItems"></div> <!-- Usa la nuova classe -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#carousel30anni" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
