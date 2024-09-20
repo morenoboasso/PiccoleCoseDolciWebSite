@@ -154,3 +154,34 @@ function compressImage(file, maxWidth, maxHeight, quality) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const numImages = 18;
+  const carouselInner = document.getElementById('carouselItems');
+
+  for (let i = 1; i <= numImages; i++) {
+      // Crea il div per ogni immagine
+      const div = document.createElement('div');
+      div.className = `carousel-item ${i === 1 ? 'active' : ''}`;
+
+      // Crea l'immagine
+      const img = document.createElement('img');
+      img.src = `assets/30/img${i}.webp`; // Assumendo che le immagini si chiamino img1.jpeg, img2.jpeg, ecc.
+      img.className = 'd-block mx-auto';
+      img.style.maxWidth = '300px'; // Imposta la larghezza massima per le immagini
+      img.alt = `30 Anni - Immagine ${i}`;
+
+      // Crea il pulsante per scaricare l'immagine
+      const downloadBtn = document.createElement('a');
+      downloadBtn.href = img.src;
+      downloadBtn.className = 'btn btn-primary mt-2 d-block mx-auto';
+      downloadBtn.download = `img${i}.jpeg`;
+      downloadBtn.innerText = 'Scarica';
+
+      // Aggiungi immagine e pulsante nel div
+      div.appendChild(img);
+      div.appendChild(downloadBtn);
+
+      // Aggiungi il div al carosello
+      carouselInner.appendChild(div);
+  }
+});

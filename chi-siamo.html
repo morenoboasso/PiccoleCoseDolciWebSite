@@ -101,7 +101,7 @@
         
         <!-- About Us Section -->
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h2 class="chisiamo-section-title text-center-mobile">Chi Siamo</h2><br>
                 <p class="chisiamo-section-text text-mobile-custom text-center align-center center">
                     Benvenuti a Piccole Cose Dolci, il laboratorio artigianale di pasticceria che, dal settembre 1994,
@@ -116,17 +116,43 @@
                     ogni dolce che offriamo, dalla preparazione alla vendita, per garantire un'esperienza unica a tutti
                     i nostri clienti.
                 </p>
-            </div>
-            
-
-            <div class="col-md-6">
-                <center>
-                    <img src="assets/pasticceri.jpeg" alt="Il Team della Pasticceria"
-                        class="chisiamo-img-fluid chisiamo-img-small d-none d-lg-block ">
-                </center>
-            </div>
-            
+            </div>  
         </div>
+
+
+       <!-- Festeggiamo 30 anni di attività -->
+<div class="container my-5">
+    <h2 class="text-center">Festeggiamo 30 anni di attività!</h2>
+    <button type="button" class="btn btn-primary mx-auto d-block" data-bs-toggle="modal" data-bs-target="#carouselModal">
+        Mostra Slideshow
+    </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade center" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style=" width: 90%;height: 10px;"> <!-- Imposta larghezza fissa -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="carouselModalLabel">30 Anni di Piccole Cose Dolci</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="max-height: 500px; overflow-y: auto;"> <!-- Imposta altezza fissa -->
+                <div id="carousel30anni" class="carousel slide">
+                    <div class="carousel-inner" id="carouselItems"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel30anni" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel30anni" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
         <!-- Our Team Section -->
         <div class="container my-5">
@@ -275,7 +301,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
-<script src="scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 
 </html>
