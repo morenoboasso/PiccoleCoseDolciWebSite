@@ -155,32 +155,65 @@ function compressImage(file, maxWidth, maxHeight, quality) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const numImages = 18;
+  const numImages = 34;
   const carouselInner = document.getElementById('carouselItems');
+  const photoCounter = document.getElementById('photoCounter');
+  const downloadSingleBtn = document.getElementById('downloadSingle'); // Pulsante per scaricare la singola foto
 
   for (let i = 1; i <= numImages; i++) {
-      // Create a div for each image
-      const div = document.createElement('div');
-      div.className = `carousel-item ${i === 1 ? 'active' : ''}`;
+    // Crea un div per ciascuna immagine
+    const div = document.createElement('div');
+    div.className = `carousel-item ${i === 1 ? 'active' : ''}`;
 
-      // Create the image
-      const img = document.createElement('img');
-      img.src = `assets/30/img${i}.webp`;
-      img.className = 'd-block mx-auto img-fluid 30ANNI-img'; // Add custom class for image
-      img.alt = `30 Anni - Immagine ${i}`;
+    // Crea l'immagine
+    const img = document.createElement('img');
+    img.src = `assets/30/img${i}.webp`;
+    img.className = 'd-block mx-auto img-fluid 30ANNI-img'; // Aggiunge la classe personalizzata
+    img.alt = `30 Anni - Immagine ${i}`;
 
-      // Create download button
-      const downloadBtn = document.createElement('a');
-      downloadBtn.href = img.src;
-      downloadBtn.className = 'btn btn-primary mt-2 d-block mx-auto 30ANNI-btn'; // Add custom class for button
-      downloadBtn.download = `img${i}.jpeg`;
-      downloadBtn.innerText = 'Scarica';
+    // Aggiungi l'immagine al div
+    div.appendChild(img);
 
-      // Append image and button to the div
-      div.appendChild(img);
-      div.appendChild(downloadBtn);
-
-      // Append the div to the carousel
-      carouselInner.appendChild(div);
+    // Aggiungi il div al carosello
+    carouselInner.appendChild(div);
   }
+
+  // Funzionalità di scaricamento "Scarica tutte"
+  const downloadAllBtn = document.getElementById('downloadAll');
+  downloadAllBtn.addEventListener('click', function () {
+    const zip = new JSZip(); // Assicurati di aver caricato JSZip
+    let count = 0;
+
+    for (let i = 1; i <= numImages; i++) {
+      const url = `assets/30/img${i}.webp`;
+      const filename = `img${i}.jpeg`;
+
+      // Aggiungi le immagini al file ZIP
+      JSZipUtils.getBinaryContent(url, function (err, data) {
+        if (err) {
+          throw err; // Gestione errore
+        }
+        zip.file(filename, data, { binary: true });
+        count++;
+
+        if (count === numImages) {
+          zip.generateAsync({ type: 'blob' }).then(function (content) {
+            saveAs(content, 'foto 30 anni - Unzippami!.zip'); // Scarica il file ZIP
+          });
+        }
+      });
+    }
+  });
+
+  // Aggiorna il contatore e il pulsante di scaricamento quando la diapositiva cambia
+  const carousel = document.getElementById('carousel30anni');
+  carousel.addEventListener('slide.bs.carousel', function (event) {
+    const currentIndex = event.to + 1; // `to` è l'indice della prossima diapositiva, quindi aggiungiamo 1
+    photoCounter.textContent = `${currentIndex} di ${numImages}`;
+    
+    // Aggiorna il link del pulsante di download per l'immagine corrente
+    const currentImgSrc = `assets/30/img${currentIndex}.webp`;
+    downloadSingleBtn.href = currentImgSrc;
+    downloadSingleBtn.download = `img${currentIndex}.jpeg`;
+  });
 });
